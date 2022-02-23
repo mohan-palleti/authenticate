@@ -7,8 +7,8 @@ const { register, login } = require("./controllers/auth.controllers");
 
 app.post("/register", register);
 app.post("/login", login);
-
-app.listen(1212, async () => {
+const PORT = process.env.PORT || 1212;
+app.listen(PORT, async () => {
   try {
     await connect();
     console.log("Server is running on 1212");
